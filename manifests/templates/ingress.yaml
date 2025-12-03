@@ -1,0 +1,21 @@
+---
+# Source: helm for kubernetes/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sports-website-4dd5788a                  # Ingress name
+  labels:
+    app: sports-website-4dd5788a
+spec:
+  ingressClassName: nginx   # Optional ingressClass
+  rules:
+    - host: "sports-website-4dd5788a.smartops.space"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: sports-website-4dd5788a               # Links to Service name dynamically
+                port:
+                  number: 8080  # Links to service port dynamically
