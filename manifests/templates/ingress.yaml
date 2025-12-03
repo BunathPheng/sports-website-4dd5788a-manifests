@@ -18,4 +18,4 @@ spec:
               service:
                 name: sports-website-4dd5788a               # Links to Service name dynamically
                 port:
-                  number: 8080  # Links to service port dynamically
+                  number: 3000  # Links to service port dynamically
