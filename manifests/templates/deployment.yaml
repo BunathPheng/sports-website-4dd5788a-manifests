@@ -1,0 +1,25 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sports-website-4dd5788a
+  labels:
+    app: sports-website-4dd5788a
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: sports-website-4dd5788a
+  template:
+    metadata:
+      labels:
+        app: sports-website-4dd5788a
+    spec:
+      containers:
+        - name: sports-website-4dd5788a
+          image: docker.io/phengbunath/sports-website-4dd5788a:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
