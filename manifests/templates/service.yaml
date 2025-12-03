@@ -12,5 +12,5 @@ spec:
     app: sports-website-4dd5788a         # Matches Deployment labels
   ports:
     - protocol: TCP
-      port: 8080         # Service port
-      targetPort: 8080  # Target container port
+      port: 3000         # Service port
+      targetPort: 3000  # Target container port
